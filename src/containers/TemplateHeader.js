@@ -33,7 +33,7 @@ function TemplateHeader() {
 
   return (
     <>
-      <div className="navbar sticky top-0 bg-base-100 flex justify-between  z-10 shadow-md float-right ">
+      <div className="navbar sticky top-0 flex justify-between z-10 shadow-md">
         <Link to={"/app/welcome"}>
           <img
             className="mask mask-squircle w-10"
