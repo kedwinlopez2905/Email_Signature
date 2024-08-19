@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card_1 = () => {
   return (
-    <div className="relative px-4 py-8 shadow-md rounded-2xl group">
+    <div className="relative px-4 py-8 mt-6 shadow-md rounded-2xl group">
       {/* Content with hover blur effect */}
-      <div className="relative cursor-pointer duration-300 group-hover:blur-lg">
+      <div className="relative duration-300 cursor-pointer group-hover:blur-lg">
         <div className="flex justify-between">
-          <div className="flex-1 flex flex-col items-center justify-center border-r-2 border-red-500">
-            <p className="text-red-400 font-bold">Xanthe Robinson</p>
+          <div className="flex flex-col items-center justify-center flex-1 border-r-2 border-red-500">
+            <p className="font-bold text-red-400">Xanthe Robinson</p>
             <p className="text-[11px]">Founder of Chain of Flower Shops</p>
           </div>
           <div className="pl-4">
@@ -58,7 +59,7 @@ const Card_1 = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-3xl bg-red-100 inline-flex">
+        <div className="inline-flex bg-red-100 rounded-3xl">
           <p className="text-red-500 text-[12px] font-extrabold py-1 px-3">
             Order flower delivery now
           </p>
@@ -66,10 +67,12 @@ const Card_1 = () => {
       </div>
 
       {/* Button that appears on hover */}
-      <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button className="bg-cyan-300 text-black font-bold py-2 px-4 rounded-3xl">
+      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+        <Link to="/steps">
+        <button className="px-4 py-2 font-bold text-black bg-cyan-300 rounded-3xl">
           Use Template
         </button>
+        </Link>
       </div>
     </div>
   );
