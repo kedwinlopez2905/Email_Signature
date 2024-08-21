@@ -5,6 +5,7 @@ import TemplateHeader from "../../containers/TemplateHeader";
 import InputText from "../../components/Input/InputText";
 import SelectBox from "../../components/Input/SelectBox";
 import Linkicon from "../../components/LinkIcon/linkicon";
+import { Link } from "react-router-dom";
 const steps = [
   {
     title: "Choice!",
@@ -173,7 +174,9 @@ const App = () => {
                 type="badge badge-primary"
                 // onClick={() => message.success("Processing complete!")}
               >
+              <Link to={"/editor"}>
                 Get started
+              </Link>
               </Button>
             )}
             {current < steps.length - 1 && (

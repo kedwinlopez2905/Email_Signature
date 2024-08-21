@@ -69,9 +69,9 @@ const Card_1 = () => {
       {/* Button that appears on hover */}
       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
         <Link to="/steps">
-        <button className="px-4 py-2 font-bold text-black bg-cyan-300 rounded-3xl">
-          Use Template
-        </button>
+          <button className="px-4 py-2 font-bold text-black bg-cyan-300 rounded-3xl">
+            Use Template
+          </button>
         </Link>
       </div>
     </div>

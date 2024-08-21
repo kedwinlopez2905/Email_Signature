@@ -18,7 +18,7 @@ const Register = lazy(() => import("./pages/Register"));
 const Documentation = lazy(() => import("./pages/Documentation"));
 const Templates = lazy(() => import("./pages/templates"));
 const Steps = lazy(() => import("./pages/protected/Steps"));
-
+const Editor =  lazy(() => import("./pages/protected/Editor"))
 // Initializing different libraries
 initializeApp();
 
@@ -43,7 +43,7 @@ function App() {
           <Route path="/steps" element={<Steps />} />
           {/* Place new routes over this */}
           <Route path="/app/*" element={<Layout />} />
-
+          <Route path="/editor" element={<Editor/>}/>
           <Route
             path="*"
             element={<Navigate to={token ? "/templates" : "/login"} replace />}

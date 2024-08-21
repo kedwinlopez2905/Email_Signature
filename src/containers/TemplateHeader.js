@@ -33,10 +33,10 @@ function TemplateHeader() {
 
   return (
     <>
-      <div className="navbar top-0 flex justify-between z-1000 shadow-md">
+      <div className="top-0 flex justify-between gap-4 shadow-md navbar z-1000">
         <Link to={"/app/welcome"}>
           <img
-            className="mask mask-squircle w-10"
+            className="w-10 mask mask-squircle"
             src="/logo192.png"
             alt="DashWind Logo"
           />
@@ -45,7 +45,7 @@ function TemplateHeader() {
         <div className="flex-none ">
           <label>
             <div className="inline-block float-z">
-              <button className="btn px-6 btn-sm normal-case badge badge-secondary">
+              <button className="px-6 normal-case btn btn-sm badge badge-secondary">
                 login
               </button>
             </div>
