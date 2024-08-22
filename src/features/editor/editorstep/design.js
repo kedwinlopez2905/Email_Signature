@@ -50,9 +50,11 @@ const Design = () => {
             </div>
             <div className='flex justify-between mt-8'>
                 <h1>Icon color</h1>
-                <div className='w-80'>
-                  <Slider defaultValue={0} disabled={''} />
-                </div>
+                <ColorPicker value={color} onChange={setColor} />
+            </div>
+            <div className='flex justify-between mt-8'>
+                <h1>background color</h1>
+                <ColorPicker value={color} onChange={setColor} />
             </div>
         </TitleCard>
     )
