@@ -1,6 +1,9 @@
 import TemplateHeader from "../containers/TemplateHeader";
-import Card_1 from "../components/Cards/Card_1";
+import Card_1 from "../components/Cards/Card_1"
 import Card_2 from "../components/Cards/Card_2"
+import Card_3 from "../components/Cards/Card_3"
+import Card_4 from "../components/Cards/Card_4"
+import Card_5 from "../components/Cards/Card_5"
 function ExternalPage() {
   return (
     <div>
@@ -13,14 +16,17 @@ function ExternalPage() {
             <div className="row-auto">
               <Card_1 />
             </div>
-            <div>
+            <div className="row-auto">
               <Card_2 />
             </div>
-            <div>
-              <Card_1 />
+            <div className="row-auto">
+              <Card_3 />
             </div>
-            <div>
-              <Card_1 />
+            <div className="row-auto">
+              <Card_4 />
+            </div>
+            <div className="row-auto">
+              <Card_5 />
             </div>
           </div>
         </div>

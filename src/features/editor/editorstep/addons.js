@@ -13,7 +13,7 @@ import TitleCard from "../../../components/Cards/TitleCard";
 
 const initialItems = [
   {
-    key: "0",
+    key: "1",
     label: "MyPage",
     children: <button onClick={() => console.log("r")}>r</button>,
     expandIcon: ({ isActive }) =>
@@ -21,19 +21,11 @@ const initialItems = [
     collapsible: "header",
   },
   {
-    key: "1",
+    key: "2",
     label: "Sign-off",
     children: <button onClick={() => console.log("r")}>r</button>,
     expandIcon: ({ isActive }) =>
       isActive ? <SignatureFilled /> : <SignatureOutlined />,
-    collapsible: "disabled",
-  },
-  {
-    key: "2",
-    label: "MyPage",
-    children: <button onClick={() => console.log("r")}>r</button>,
-    expandIcon: ({ isActive }) =>
-      isActive ? <MinusCircleOutlined /> : <PlusCircleOutlined />,
     collapsible: "disabled",
   },
   {
@@ -155,7 +147,7 @@ const Addons = () => {
                             ...provided.draggableProps.style, // Essential to keep positioning intact
                             marginBottom: 10, // Only apply margin outside of draggable's positioning styles
                           }}
-                          className="flex gap-2 items-center"
+                          className="flex items-center gap-2"
                         >
                           <Collapse
                             size="small"
@@ -163,7 +155,7 @@ const Addons = () => {
                             style={{
                               borderRadius: 20,
                             }}
-                            className="w-full shadow-md overflow-hidden bg-white"
+                            className="w-full overflow-hidden bg-white shadow-md"
                             items={[item]}
                           />
                           <Button
@@ -190,7 +182,7 @@ const Addons = () => {
                 marginBottom: 10, // Only apply margin outside of draggable's positioning styles
               }}
               key={item.key}
-              className="flex gap-3 w-full border p-2 px-3 rounded-full shadow-md text-sm cursor-pointer hover:shadow-lg"
+              className="flex w-full gap-3 p-2 px-3 text-sm border rounded-full shadow-md cursor-pointer hover:shadow-lg"
               onClick={() => changeCollapsible(item.key)}
             >
               <p>{item.expandIcon(false)}</p>

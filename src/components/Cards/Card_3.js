@@ -7,11 +7,17 @@ const Card_2 = () => {
     <div className="relative px-4 py-8 mt-6 shadow-md rounded-2xl group">
       {/* Content with hover blur effect */}
       <div className="relative duration-300 cursor-pointer group-hover:blur-lg ">
-        <div className="flex">
-          <div className="">
-            <img alt="" src="img/c01e7193-d60c-5afe-8eb4-f0dd5d22876c.png" className="w-full"/>
+        <div className="flex " >
+          <div className="mr-4 border-r-2 border-red-600 ">
+            <img
+              alt=""
+              src="img/3/profile.png"
+              className="w-48 mr-4"
+            />
+          </div>
+          <div className="ml-4 ">
             <h1 className="text-[14px]">
-              VANESSA SLATER REALTOR<br/> IN SKYLINE REALTY
+              VANESSA SLATER REALTOR IN SKYLINE REALTY
             </h1>
             <h1 className="text-[11px]">
               +1 983 333 3739
@@ -21,24 +27,17 @@ const Card_2 = () => {
               mysignature.io
             </h1>
           </div>
-          <div>
-            <img
-              alt=""
-              src="img/390e98a2-420e-52a6-a8a8-ef6aa04f2b12.png"
-              className="mr-28"
-            />
-          </div>
         </div>
-        <div className="flex mt-4">
-          <img alt="" src="img/amazon_shape2_white.png" className="w-24 h-8" />
-          <img alt="" src="img/ebay_shape2_white.png" className="w-24 h-8" />
-        </div>
-        <div>
+        {/* <div>
           <img
             alt=""
-            src="img/978bfbea-ac34-57fd-b81a-9e0edf7e0eeb.png"
+            src="img/3/brand.gif"
             className="mt-6 mb-8"
           />
+        </div> */}
+        <div className="flex mt-4">
+          <img alt="" src="img/3/instagram_v1_shape3_i.png" className="w-24 h-8" />
+          <img alt="" src="img/3/pinterest_v1_shape3_i.png" className="w-24 h-8" />
         </div>
       </div>
       {/* Button that appears on hover */}
