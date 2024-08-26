@@ -32,7 +32,12 @@ const routes = [
   {
     path: '/app/leads', // url
     icon: <DocumentDuplicateIcon className={iconClasses}/>, // icon component
-    name: 'My pages', // name that appear in Sidebar
+    name: 'Leads', // name that appear in Sidebar
+  },
+  {
+    path: '/app/mypage',
+    icon: <Squares2X2Icon className={iconClasses}/>, 
+    name: 'My pages',
   },
   {
     path: '/app/transactions', // url

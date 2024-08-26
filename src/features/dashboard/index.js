@@ -22,12 +22,9 @@
 //     {title : "Active Users", value : "5.6k", icon : <UsersIcon className='w-8 h-8'/>, description : "↙ 300 (18%)"},
 // ]
 
-
-
 // function Dashboard(){
 
 //     const dispatch = useDispatch()
- 
 
 //     const updateDashboardPeriod = (newRange) => {
 //         // Dashboard range changed, write code to refresh your values
@@ -38,9 +35,9 @@
 //         <>
 //         {/** ---------------------- Select Period Content ------------------------- */}
 //             <DashboardTopBar updateDashboardPeriod={updateDashboardPeriod}/>
-        
+
 //         {/** ---------------------- Different stats content 1 ------------------------- */}
-//             <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6">
+//             <div className="grid grid-cols-1 gap-6 mt-2 lg:grid-cols-4 md:grid-cols-2">
 //                 {
 //                     statsData.map((d, k) => {
 //                         return (
@@ -50,24 +47,22 @@
 //                 }
 //             </div>
 
-
-
 //         {/** ---------------------- Different charts ------------------------- */}
-//             <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
+//             <div className="grid grid-cols-1 gap-6 mt-4 lg:grid-cols-2">
 //                 <LineChart />
 //                 <BarChart />
 //             </div>
-            
+
 //         {/** ---------------------- Different stats content 2 ------------------------- */}
-        
-//             <div className="grid lg:grid-cols-2 mt-10 grid-cols-1 gap-6">
+
+//             <div className="grid grid-cols-1 gap-6 mt-10 lg:grid-cols-2">
 //                 <AmountStats />
 //                 <PageStats />
 //             </div>
 
 //         {/** ---------------------- User source channels table  ------------------------- */}
-        
-//             <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
+
+//             <div className="grid grid-cols-1 gap-6 mt-4 lg:grid-cols-2">
 //                 <UserChannels />
 //                 <DoughnutChart />
 //             </div>
@@ -77,85 +72,170 @@
 
 // export default Dashboard
 
-import moment from "moment"
-import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { showNotification } from "../common/headerSlice"
-import TitleCard from "../../components/Cards/TitleCard"
-import { RECENT_TRANSACTIONS } from "../../utils/dummyData"
-import FunnelIcon from '@heroicons/react/24/outline/FunnelIcon'
-import XMarkIcon from '@heroicons/react/24/outline/XMarkIcon'
-import SearchBar from "../../components/Input/SearchBar"
+import { useEffect, useState } from "react";
+import TitleCard from "../../components/Cards/TitleCard";
+import { RECENT_TRANSACTIONS } from "../../utils/dummyData";
+import SearchBar from "../../components/Input/SearchBar";
+import TableCellsIcon from "@heroicons/react/24/outline/TableCellsIcon";
+const TopSideButtons = ({ removeFilter, applyFilter, applySearch }) => {
+  const [filterParam, setFilterParam] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const locationFilters = ["Paris", "London", "Canada", "Peru", "Tokyo"];
 
-const TopSideButtons = ({removeFilter, applyFilter, applySearch}) => {
+  const showFiltersAndApply = (params) => {
+    applyFilter(params);
+    setFilterParam(params);
+  };
 
-    const [filterParam, setFilterParam] = useState("")
-    const [searchText, setSearchText] = useState("")
-    const locationFilters = ["Paris", "London", "Canada", "Peru", "Tokyo"]
+  const removeAppliedFilter = () => {
+    removeFilter();
+    setFilterParam("");
+    setSearchText("");
+  };
 
-    const showFiltersAndApply = (params) => {
-        applyFilter(params)
-        setFilterParam(params)
+  useEffect(() => {
+    if (searchText == "") {
+      removeAppliedFilter();
+    } else {
+      applySearch(searchText);
     }
+  }, [searchText]);
+  return (
+    <div className="inline-block float-right">
+      <SearchBar
+        searchText={searchText}
+        styleClass="mr-4"
+        setSearchText={setSearchText}
+      />
+      <div className="dropdown dropdown-bottom dropdown-end">
+        <label tabIndex={0} className="rounded-full btn btn-sm btn-outline">
+          New Signature
+        </label>
+        <ul
+          tabIndex={0}
+          className="flex w-56 p-2 mt-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box"
+        >
+          <div className="mb-2 text-sm">info</div>
+          <div className="text-sm">Do you need more signature?</div>
+          <div className="mt-0 mb-0 divider"></div>
+          <label
+            tabIndex={0}
+            className="normal-case rounded-full btn btn-sm btn-outline bg-primary"
+          >
+            Upgrade
+          </label>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-    const removeAppliedFilter = () => {
-        removeFilter()
-        setFilterParam("")
-        setSearchText("")
-    }
+function Transactions() {
+  const [trans, setTrans] = useState(RECENT_TRANSACTIONS);
+  const submenuIconClasses = `h-12 w-12`;
 
-    useEffect(() => {
-        if(searchText == ""){
-            removeAppliedFilter()
-        }else{
-            applySearch(searchText)
+  const removeFilter = () => {
+    setTrans(RECENT_TRANSACTIONS);
+  };
+
+  const applyFilter = (params) => {
+    let filteredTransactions = RECENT_TRANSACTIONS.filter((t) => {
+      return t.location == params;
+    });
+    setTrans(filteredTransactions);
+  };
+
+  // Search according to name
+  const applySearch = (value) => {
+    let filteredTransactions = RECENT_TRANSACTIONS.filter((t) => {
+      return (
+        t.email.toLowerCase().includes(value.toLowerCase()) ||
+        t.email.toLowerCase().includes(value.toLowerCase())
+      );
+    });
+    setTrans(filteredTransactions);
+  };
+
+  return (
+    <>
+      <TitleCard
+        title="MyPages used (1 / 1)"
+        topMargin="mt-2"
+        TopSideButtons={
+          <TopSideButtons
+            applySearch={applySearch}
+            applyFilter={applyFilter}
+            removeFilter={removeFilter}
+          />
         }
-    }, [searchText])
-    return(
-        <div className="inline-block float-right">
-            <SearchBar searchText={searchText} styleClass="mr-4" setSearchText={setSearchText}/>
-            <div className="dropdown dropdown-bottom dropdown-end">
-                <label tabIndex={0} className="btn btn-sm btn-outline rounded-full">New Signature</label>
-                <ul tabIndex={0} className="flex menu menu-compact dropdown-content mt-2 p-2 w-56 shadow bg-base-100 rounded-box">
-                    <div className="text-sm mb-2">info</div>
-                    <div className="text-sm">Do you need more signature?</div>
-                    <div className="divider mt-0 mb-0"></div>
-                    <label tabIndex={0} className="btn btn-sm btn-outline normal-case bg-primary rounded-full">Upgrade</label>
-                </ul>
+      >
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <TitleCard title={"Add User"}>
+            <div className="flex justify-center ">
+              <TableCellsIcon className={submenuIconClasses} />
             </div>
+            <div className="flex justify-center my-8">
+              <h1 className="text-[12px]">
+                Need more signatures for yourself or your team?
+              </h1>
+            </div>
+            <div className="flex justify-center">
+              <label className="px-4 py-1 font-bold text-white bg-pink-500 rounded-full">
+                Add users
+              </label>
+            </div>
+          </TitleCard>
+          <TitleCard title={"1234@1234.com"}>
+            <div>
+              <p className="">
+                <h1 className="flex">
+                  <h2 className="text-[#8505fa]">name</h2> &nbsp;&nbsp;1234
+                </h1>
+                <h1 className="flex">
+                  <h2 className="text-[#8505fa]">address</h2> &nbsp;&nbsp;canada
+                </h1>
+                <h1 className="flex">
+                  <h2 className="text-[#8505fa]">website</h2>{" "}
+                  &nbsp;&nbsp;mysignature.io
+                </h1>
+                <h1 className="flex">
+                  <h2 className="text-[#8505fa]">phone</h2> &nbsp;&nbsp;+1 234 567
+                  8901
+                </h1>
+              </p>
+              <div className="mt-2 divider"></div>
+              <div className="flex justify-between">
+                <div className="flex">
+                  <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/128/17561/17561949.png"
+                    className="w-5 h-6 mr-20"
+                  />
+                </div>
+                <div className="flex">
+                  <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/128/17497/17497466.png"
+                    className="w-5 h-6"
+                  />
+                  <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/128/17632/17632489.png"
+                    className="w-5 h-6 mx-4"
+                  />
+                  <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/128/17570/17570077.png"
+                    className="w-5 h-6"
+                  />
+                </div>
+              </div>
+            </div>
+          </TitleCard>
         </div>
-    )
+      </TitleCard>
+    </>
+  );
 }
 
-
-function Transactions(){
-
-
-    const [trans, setTrans] = useState(RECENT_TRANSACTIONS)
-
-    const removeFilter = () => {
-        setTrans(RECENT_TRANSACTIONS)
-    }
-
-    const applyFilter = (params) => {
-        let filteredTransactions = RECENT_TRANSACTIONS.filter((t) => {return t.location == params})
-        setTrans(filteredTransactions)
-    }
-
-    // Search according to name
-    const applySearch = (value) => {
-        let filteredTransactions = RECENT_TRANSACTIONS.filter((t) => {return t.email.toLowerCase().includes(value.toLowerCase()) ||  t.email.toLowerCase().includes(value.toLowerCase())})
-        setTrans(filteredTransactions)
-    }
-
-    return(
-        <>
-            
-            <TitleCard title="Signatures used(1/1)        Analytics"  topMargin="mt-2" TopSideButtons={<TopSideButtons applySearch={applySearch} applyFilter={applyFilter} removeFilter={removeFilter}/>}>
-            </TitleCard>
-        </>
-    )
-}
-
-
-export default Transactions
+export default Transactions;

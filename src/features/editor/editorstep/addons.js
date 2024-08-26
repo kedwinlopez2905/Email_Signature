@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Collapse } from "antd";
+import { Button, Collapse , Radio , Input , Slider , ColorPicker } from "antd";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import {
   PlusCircleOutlined,
@@ -10,20 +10,26 @@ import {
 } from "@ant-design/icons";
 
 import TitleCard from "../../../components/Cards/TitleCard";
+import Signoff from "./addons/signoff";
+import Mypage from "./addons/mypage";
+import Disclaimer from "./addons/disclaimer";
+import Calendar from "./addons/calendar";
+import Message from "./addons/message";
+
 
 const initialItems = [
   {
     key: "1",
-    label: "MyPage",
-    children: <button onClick={() => console.log("r")}>r</button>,
+    label: "Sign-off",
+    children: <Signoff/>,
     expandIcon: ({ isActive }) =>
       isActive ? <SignatureFilled /> : <SignatureOutlined />,
     collapsible: "header",
   },
   {
     key: "2",
-    label: "Sign-off",
-    children: <button onClick={() => console.log("r")}>r</button>,
+    label: "MyPage",
+    children: <Mypage />,
     expandIcon: ({ isActive }) =>
       isActive ? <SignatureFilled /> : <SignatureOutlined />,
     collapsible: "disabled",
@@ -31,7 +37,7 @@ const initialItems = [
   {
     key: "3",
     label: "Event & Calendar",
-    children: <button onClick={() => console.log("r")}>r</button>,
+    children:<Calendar/>,
     expandIcon: ({ isActive }) =>
       isActive ? <MinusCircleOutlined /> : <PlusCircleOutlined />,
     collapsible: "disabled",
@@ -63,7 +69,7 @@ const initialItems = [
   {
     key: "7",
     label: "disclaimer",
-    children: <button onClick={() => console.log("r")}>r</button>,
+    children: <Disclaimer/>,
     expandIcon: ({ isActive }) =>
       isActive ? <MinusCircleOutlined /> : <PlusCircleOutlined />,
     collapsible: "disabled",
@@ -79,7 +85,7 @@ const initialItems = [
   {
     key: "9",
     label: "Green Message",
-    children: <button onClick={() => console.log("r")}>r</button>,
+    children: <Message/>,
     expandIcon: ({ isActive }) =>
       isActive ? <MinusCircleOutlined /> : <PlusCircleOutlined />,
     collapsible: "disabled",
@@ -123,6 +129,7 @@ const Addons = () => {
       )
     );
   };
+  
   return (
     <>
       <TitleCard title={"Added addons"}>
@@ -173,7 +180,7 @@ const Addons = () => {
           </Droppable>
         </DragDropContext>
       </TitleCard>
-      <TitleCard title={"Added addons"}>
+      <TitleCard title={"Available addons"}>
         {items
           .filter((item) => item.collapsible === "disabled")
           .map((item, index) => (

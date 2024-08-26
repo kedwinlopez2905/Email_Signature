@@ -34,7 +34,7 @@ const App = () => {
   const industry = [
     { name: "Marketing and Sales" },
     { name: "Real Estate and Construction", value: "1" },
-    { name: "E-commerce" },
+    { name: "E-commerce",value:"2"},
     { name: "Software and Internet" },
     { name: "HR and Recruiting Services" },
     { name: "Non-profit" },
@@ -68,16 +68,17 @@ const App = () => {
     <>
       <TemplateHeader />
       <div className="z-0 grid h-full grid-cols-2">
-        <div className="h-full mr-12">
-          <Carousel autoplay effect="fade" waitForAnimate={true}>
-            <img src="carousel1.png" alt="this is carousel1" />
-            {/* <img src="carousel2.png" alt="this is carousel2" /> */}
-            {/* <img src="carousel3.webp" alt="this is carousel3" />
-            <img src="carousel4.webp" alt="this is carousel4" />
-            <img src="carousel5.webp" alt="this is carousel5" /> */}
+        <div className="h-full mr-12 ">
+          <Carousel autoplay effect="fade" waitForAnimate={true} adaptiveHeight={true} autoplaySpeed={1700} speed={300}>
+            <img src="https://mysignature.io/assets/questions-step1-8f877f56.webp" alt="this is carousel1" className="h-full" style={{Height:'100%'}} />
+            <img src="https://mysignature.io/assets/questions-step2-12e5e956.webp" alt="this is carousel2" />
+            <img src="https://mysignature.io/assets/questions-step4-f6c67b41.webp" alt="this is carousel3" />
+            <img src="https://mysignature.io/assets/questions-step5-d65d26ec.webp" alt="this is carousel4" />
+            <img src="https://mysignature.io/assets/questions-step3-e5d2b2a8.webp" alt="this is carousel5" />
           </Carousel>
         </div>
-        <div className="mt-40 mr-6">
+
+        <div className="sticky pt-40 mr-6" >
           <Steps current={current} items={items} />
           <div style={contentStyle}>
             {steps[current].content}

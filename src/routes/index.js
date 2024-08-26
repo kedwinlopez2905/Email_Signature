@@ -28,6 +28,10 @@ const routes = [
     component: Welcome, // view rendered
   },
   {
+    path: '/mypage',
+    component: Dashboard,
+  },
+  {
     path: '/leads',
     component: Leads,
   },
