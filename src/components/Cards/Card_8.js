@@ -2,107 +2,85 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TitleCard from "./TitleCard";
 
-const Card_7 = () => {
+const Card_8 = () => {
   return (
     <div className="relative px-4 py-8 mt-6 shadow-md rounded-2xl group">
       {/* Content with hover blur effect */}
       <div className="relative duration-300 cursor-pointer group-hover:blur-lg ">
-        <div className="flex">
+        <img
+          alt=""
+          src="https://img.mysignature.io/a/v1/4/3/7/43716d42-d2d7-51b9-9695-5e33bfaee66a.png"
+          className="w-full h-8 mr-24 "
+        />
+        <div className="flex items-center">
           <div>
             <img
               alt=""
-              src="https://img.mysignature.io/p/b/0/4/b040eb93-bbce-5280-b70e-2e71aee4602f.png?time=1720691375"
-              className="mr-4 h-36 w-28"
+              src="https://img.mysignature.io/p/2/3/4/23423a38-4b1c-5ebe-83af-58367bfa50fc.png?time=1709309023"
+              className="mr-7 w-28 h-28"
             />
           </div>
           <div className="">
-            <h1 className="text-[14px] text-[#398e80]">Joseph Collins</h1>
-            <h1 className="text-[11px] mt-2">
-              e:&nbsp;name@example.com
-              <br />
-              m:&nbsp;+1 983 333 3739
-              <br />
-              w:&nbsp;mysignature.io
-              <br />
-              Let's make the email!
-            </h1>
-            <div className="flex gap-1">
-              {/* style="display: block; border-radius: 0%; width: 24px; height: 24px; text-align: center; background-color: rgb(255, 0, 105); font-size: 12px; font-family: initial; line-height: 1;" */}
-              <span className="bg-[#ff0069] mt-3 block rounded-none w-6 h-6 text-center text-[12px] font-serif">
+            <div className="flex gap-2">
+              <span className="bg-[#e0d2e5] rounded-[15%] w-[26px] text-center text-[12px] h-[26px]">
                 <svg
                   viewBox="0 0 1024 1024"
                   xmlns="http://www.w3.org/2000/svg"
-                  // style="position: relative; top: 4.8px; width: 14.4px;"
-                  className="relative w-4 top-[4.8px] ml-1"
+                  className="relative top-[3.5px] w-4 ml-[4px]"
                 >
                   <path
                     d="M682.653 512c0-93.991-76.659-170.654-170.654-170.654s-170.654 76.659-170.654 170.654c0 93.995 76.659 170.654 170.654 170.654s170.654-76.659 170.654-170.654zM774.646 512c0 145.323-117.325 262.645-262.645 262.645s-262.645-117.325-262.645-262.645c0-145.32 117.325-262.645 262.645-262.645s262.645 117.325 262.645 262.645zM846.641 238.688c0 33.997-27.331 61.328-61.328 61.328s-61.328-27.331-61.328-61.328c0-33.996 27.331-61.328 61.328-61.328s61.328 27.331 61.328 61.328v0zM512 92.033c-74.66 0-234.647-5.999-301.975 20.666-23.331 9.332-40.662 20.666-58.661 38.662s-29.33 35.33-38.662 58.661c-26.666 67.328-20.666 227.315-20.666 301.975s-5.999 234.647 20.666 301.975c9.332 23.331 20.666 40.662 38.662 58.661s35.33 29.33 58.661 38.662c67.328 26.666 227.315 20.666 301.975 20.666s234.647 5.999 301.975-20.666c23.331-9.332 40.662-20.666 58.661-38.662s29.33-35.33 38.662-58.661c26.666-67.328 20.666-227.315 20.666-301.975s5.999-234.647-20.666-301.975c-9.332-23.331-20.666-40.662-38.662-58.661s-35.33-29.33-58.661-38.662c-67.328-26.666-227.315-20.666-301.975-20.666zM1023.958 512c0 70.66 0.667 140.655-3.332 211.316-4 81.995-22.666 154.655-82.66 214.651s-132.656 78.66-214.651 82.66c-70.66 4-140.655 3.332-211.316 3.332s-140.655 0.667-211.316-3.332c-81.995-4-154.655-22.666-214.651-82.66s-78.66-132.656-82.66-214.651c-4-70.66-3.332-140.655-3.332-211.316s-0.667-140.655 3.332-211.316c4-81.995 22.666-154.655 82.66-214.651s132.656-78.66 214.651-82.66c70.66-4 140.655-3.332 211.316-3.332s140.655-0.667 211.316 3.332c81.995 4 154.655 22.666 214.651 82.66s78.66 132.656 82.66 214.651c4 70.66 3.332 140.655 3.332 211.316z"
-                    fill="#ffffff"
+                    fill="#000000"
                   ></path>
                 </svg>
               </span>
-              <span className="bg-[#1877f2] mt-3 block rounded-none w-6 h-6 text-center text-[12px] font-serif">
+              <h1>Jellete Perry</h1>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <span className="bg-[#e0d2e5] rounded-[15%] w-[26px] text-center text-[12px] h-[26px]">
                 <svg
                   viewBox="0 0 1024 1024"
                   xmlns="http://www.w3.org/2000/svg"
-                  // style="position: relative; top: 4.8px; width: 14.4px;"
-                  className="relative w-4 top-[4.8px] ml-1"
+                  className="relative top-[3.5px] w-4 ml-[4px]"
                 >
                   <path
-                    d="M1024 512.329c0-282.951-229.23-512.329-512-512.329s-512 229.378-512 512.329c0 255.715 187.23 467.671 432 506.101v-358.005h-130v-148.096h130v-112.872c0-128.403 76.44-199.328 193.39-199.328 56 0 114.61 10.006 114.61 10.006v126.081h-64.56c-63.6 0-83.44 39.496-83.44 80.052v96.061h142l-22.7 148.096h-119.3v358.005c244.77-38.43 432-250.386 432-506.101z"
-                    fill="#ffffff"
+                    d="M 519.85 160.015 c 0.849 0.003 1.763 0.006 2.74 0.009 l 10.445 0.047 c 32.116 0.171 97.222 0.754 168.688 2.734 l 17.984 0.525 l 18.156 0.587 c 3.035 0.103 6.074 0.209 9.114 0.317 l 18.242 0.685 c 36.455 1.44 72.559 3.302 104.981 5.708 c 20 2.453 63.6 2.657 102.6 44.352 c 30.8 31.68 40.8 103.829 40.8 103.829 v 0 l 0.268 2.306 c 1.612 14.109 9.951 90.704 10.132 167.131 v 0 v 79.302 c 0 84.821 -10.2 169.437 -10.2 169.437 s -10 72.149 -40.8 103.829 c -39 41.695 -82.6 41.899 -102.6 44.352 c -24.317 1.77 -50.71 3.251 -77.773 4.491 l -18.126 0.791 c -3.032 0.126 -6.069 0.249 -9.108 0.37 l -18.25 0.689 c -97.327 3.504 -193.246 4.282 -224.543 4.448 l -5.095 0.025 c -0.718 0.003 -1.369 0.006 -1.951 0.008 h -4.71 c -19.049 -0.186 -268.198 -2.748 -347.044 -10.413 c -22.8 -4.497 -74 -3.066 -113 -44.761 c -30.6 -31.68 -40.6 -103.829 -40.6 -103.829 s -10.2 -84.821 -10.2 -169.437 l 0.031 -87.507 c 0.349 -46.459 3.568 -92.038 6.292 -122.816 l 0.935 -10.225 c 1.356 -14.348 2.462 -24.089 2.82 -27.157 l 0.122 -1.034 c 0 0 9.8 -72.149 40.6 -103.829 c 39 -41.695 82.6 -41.899 102.6 -44.352 c 29.721 -2.206 62.534 -3.954 95.877 -5.339 l 27.346 -1.054 c 88.16 -3.149 175.135 -3.956 213.942 -4.163 l 10.445 -0.047 c 0.977 -0.003 1.891 -0.006 2.74 -0.009 Z M 406 369.702 v 294.114 l 276.6 -146.546 l -276.6 -147.568 Z"
+                    fill="#000000"
                   ></path>
                 </svg>
               </span>
-              <span className="bg-[#000000] mt-3 block rounded-none w-6 h-6 text-center text-[12px] font-serif">
+              <h1 className="text-[11px]">perry@mysignature.io</h1>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <span className="bg-[#e0d2e5] rounded-[15%] w-[26px] text-center text-[12px] h-[26px]">
                 <svg
                   viewBox="0 0 1024 1024"
                   xmlns="http://www.w3.org/2000/svg"
-                  // style="position: relative; top: 4.8px; width: 14.4px;"
-                  className="relative w-4 top-[4.8px] ml-1"
+                  className="relative top-[3.5px] w-4 ml-[4px]"
                 >
                   <path
                     d="M959.851 414.292c-8.556 0.813-17.146 1.239-25.742 1.277-94.288 0.013-182.228-46.466-233.877-123.613v420.932c0 171.822-142.425 311.111-318.116 311.111s-318.116-139.289-318.116-311.111c0-171.822 142.425-311.111 318.116-311.111 6.641 0 13.132 0.584 19.661 0.985v153.312c-6.529-0.766-12.945-1.934-19.661-1.934-89.669 0-162.36 71.090-162.36 158.785s72.691 158.785 162.36 158.785c89.686 0 168.888-69.103 168.888-156.814l1.567-714.895h149.974c14.142 131.528 122.584 234.263 257.455 243.905v170.387z"
-                    fill="#ffffff"
+                    fill="#000000"
                   ></path>
                 </svg>
               </span>
-              <span className="bg-[#0f9d58] mt-3 block rounded-none w-6 h-6 text-center text-[12px] font-serif">
-                <svg
-                  viewBox="0 0 1024 1024"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="relative w-4 top-[4.8px] ml-1"
-                >
-                  <path
-                    d="M1018.366 67.964l-465.206 930.414c-7.996 15.991-23.987 25.441-41.432 25.441-3.634 0-7.268-0.726-10.903-1.454-21.079-5.088-35.617-23.261-35.617-45.067v-418.686h-418.686c-21.807 0-39.979-14.538-45.067-35.617s5.088-42.886 23.987-52.336l930.414-465.206c6.542-3.634 13.811-5.088 21.079-5.088 12.357 0 23.987 4.362 32.709 13.811 14.538 13.811 18.173 35.617 8.722 53.79z"
-                    fill="#ffffff"
-                  ></path>
-                </svg>
-              </span>
+              <h1 className="text-[11px]">16 286 134 587</h1>
             </div>
           </div>
         </div>
-        <div className="flex mt-4">
+        <div className="mt-4 ">
           <img
             alt=""
-            src="https://img.mysignature.io/addons/v2/ebay_shape1_black.png"
-            className="w-24 h-8"
-          />
-          <img
-            alt=""
-            src="https://img.mysignature.io/addons/v2/appstore_shape1_black.png"
-            className="w-24 h-8"
+            src="https://img.mysignature.io/a/v1/a/e/2/ae28a2d1-1763-552e-92ca-e8c68f2d07e7.png"
+            className="w-full h-8"
           />
         </div>
-        <div className="flex items-center justify-between">
+        <div>
           <img
             alt=""
-            src="https://img.mysignature.io/addons/v2/hand-earth.png"
+            src="https://img.mysignature.io/b/2/3/4/23423a38-4b1c-5ebe-83af-58367bfa50fc.png?time=1709309023"
             className="mt-6 mb-8"
           />
-          <h1 className="text-[10px]">
-            Please consider the environment before printing this email
-          </h1>
         </div>
       </div>
       {/* Button that appears on hover */}
@@ -116,4 +94,4 @@ const Card_7 = () => {
     </div>
   );
 };
-export default Card_7;
+export default Card_8;

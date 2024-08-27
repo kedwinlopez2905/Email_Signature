@@ -6,6 +6,11 @@ import Card_4 from "../components/Cards/Card_4"
 import Card_5 from "../components/Cards/Card_5"
 import Card_6 from "../components/Cards/Card_6"
 import Card_7 from "../components/Cards/Card_7"
+import Card_8 from "../components/Cards/Card_8"
+import Card_9 from "../components/Cards/Card_9";
+import Card_10 from "../components/Cards/Card_10";
+import Card_11 from "../components/Cards/Card_11";
+
 function ExternalPage() {
   return (
     <div>
@@ -35,6 +40,18 @@ function ExternalPage() {
             </div>
             <div className="row-auto">
               <Card_7 />
+            </div>
+            <div className="row-auto">
+              <Card_8 />
+            </div>
+            <div className="row-auto">
+              <Card_9 />
+            </div>
+            <div className="row-auto">
+              <Card_10 />
+            </div>
+            <div className="row-auto">
+              <Card_11 />
             </div>
           </div>
         </div>
