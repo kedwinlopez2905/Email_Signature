@@ -70,13 +70,13 @@ const Card_10 = () => {
             </div>
           </div>
         </div>
-      </div>
       <div>
         <img
           alt=""
           src="https://img.mysignature.io/b/a/c/c/acc5a5b2-2dc5-5836-a8df-bb818f28dfde.png?time=1708938021"
           className="w-64 mt-6 mb-6 h-18"
         />
+      </div>
       </div>
       {/* Button that appears on hover */}
       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">

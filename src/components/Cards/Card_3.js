@@ -8,10 +8,10 @@ const Card_2 = () => {
       {/* Content with hover blur effect */}
       <div className="relative duration-300 cursor-pointer group-hover:blur-lg ">
         <div className="flex " >
-          <div className="mr-4 border-r-2 border-red-600 ">
+          <div className="pr-4 mr-4 border-r-2 border-red-600">
             <img
               alt=""
-              src="img/3/profile.png"
+              src="https://img.mysignature.io/p/9/b/5/9b533b35-6a10-5163-97a2-10c739f8f10e.png?time=1685569257"
               className="w-48 mr-4"
             />
           </div>
@@ -35,9 +35,9 @@ const Card_2 = () => {
             className="mt-6 mb-8"
           />
         </div> */}
-        <div className="flex mt-4">
-          <img alt="" src="img/3/instagram_v1_shape3_i.png" className="w-24 h-8" />
-          <img alt="" src="img/3/pinterest_v1_shape3_i.png" className="w-24 h-8" />
+        <div className="flex gap-2 mt-4">
+          <img alt="" src="https://img.mysignature.io/addons/v2/pinterest_v1_shape3_i.png" className="w-24 h-8" />
+          <img alt="" src="https://img.mysignature.io/addons/v2/instagram_v1_shape3_i.png" className="w-24 h-8" />
         </div>
       </div>
       {/* Button that appears on hover */}
