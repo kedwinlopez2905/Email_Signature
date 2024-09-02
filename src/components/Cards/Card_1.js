@@ -8,8 +8,13 @@ const Card_1 = () => {
       <div className="relative duration-300 cursor-pointer group-hover:blur-lg">
         <div className="flex justify-between">
           <div className="flex flex-col items-center justify-center flex-1 border-r-2 border-red-500">
+            <img
+              alt=""
+              className="w-24"
+              src="https://img.mysignature.io/p/5/3/2/532163f3-1956-51c5-9cfa-72f9d87ab928.png?time=1694162142"
+            />
             <p className="font-bold text-red-400">Xanthe Robinson</p>
-            <p className="text-[11px]">Founder of Chain of Flower Shops</p>
+            <p className="text-[11px] text-center">Founder of Chain of Flower Shops</p>
           </div>
           <div className="pl-4">
             <p className="text-[11px]">
@@ -59,7 +64,7 @@ const Card_1 = () => {
             </div>
           </div>
         </div>
-        <div className="inline-flex bg-red-100 rounded-3xl">
+        <div className="inline-flex mt-2 bg-red-100 rounded-3xl">
           <p className="text-red-500 text-[12px] font-extrabold py-1 px-3">
             Order flower delivery now
           </p>

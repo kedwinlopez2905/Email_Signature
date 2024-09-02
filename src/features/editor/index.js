@@ -100,7 +100,7 @@ const App = () => {
             </div>
           )}
         </div>
-        <div className="mt-20">
+        <div className="mt-20 ml-24">
           <div className="sticky top-20">
             {/* <TitleCard title={"Signature preview"}> */}
             <Card_2 />

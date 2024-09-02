@@ -15,6 +15,10 @@ import Card_13 from "../components/Cards/Card_13";
 import Card_14 from "../components/Cards/Card_14";
 import Card_15 from "../components/Cards/Card_15";
 import Card_16 from "../components/Cards/Card_16";
+import Card_17 from "../components/Cards/Card_17";
+import Card_18 from "../components/Cards/Card_18";
+import Card_19 from "../components/Cards/Card_19";
+import Card_20 from "../components/Cards/Card_20";
 
 function ExternalPage() {
   return (
@@ -72,6 +76,18 @@ function ExternalPage() {
             </div>
             <div className="row-auto">
               <Card_16 />
+            </div>
+            <div className="row-auto">
+              <Card_17 />
+            </div>
+            <div className="row-auto">
+              <Card_18 />
+            </div>
+            <div className="row-auto">
+              <Card_19 />
+            </div>
+            <div className="row-auto">
+              <Card_20 />
             </div>
           </div>
         </div>

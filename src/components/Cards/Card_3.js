@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TitleCard from "./TitleCard";
 
-const Card_2 = () => {
+const Card_3 = () => {
   return (
     <div className="relative px-4 py-8 mt-6 shadow-md rounded-2xl group">
       {/* Content with hover blur effect */}
@@ -51,4 +51,4 @@ const Card_2 = () => {
     </div>
   );
 };
-export default Card_2;
+export default Card_3;

@@ -57,7 +57,8 @@ const Social = () => {
             </div>
             <Input placeholder="Search" style={{marginBottom:"20px"}}></Input>
             <div className="flex">
-                <span><img src="./LinkIcon/linked.png" alt="" className="w-12 h-12"/></span>
+                    <i className="icon-facebook" title="facebook"></i>
+                <span><img src="./LinkIcon/linked.png" alt="" className="w-12 h-12 "/> <i className="icon-product-hunt" title="facebook"></i></span>
                 <span><img src="./LinkIcon/facebook.png" alt="" className="w-12 h-12"/></span>
                 <span><img src="./LinkIcon/instagram.png" alt="" className="w-12 h-12"/></span>
                 <span><img src="./LinkIcon/youtube.png" alt="" className="w-12 h-12"/></span>
